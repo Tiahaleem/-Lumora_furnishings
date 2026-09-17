@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collections — Lumora Furnishings</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="hero-page">
+
+<header class="nav-overlay transparent">
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <div class="placeholder-img brand-mark">
+        <img src="images/logo.png" alt="Lumora Furnishings logo" onerror="this.remove()" onload="this.parentElement.classList.add('has-img')">
+      </div>
+      <span class="brand-name">Lumora</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="furniture.html">Furniture</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About Us</a>
+      <a href="inspiration.html">Inspiration</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
+      </button>
+      <button class="icon-btn" id="wishlistToggle" aria-label="Open wishlist">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.2C.3 8.4 2 4.5 5.8 4c2.1-.3 4 1 6.2 3.3C14.2 5 16.1 3.7 18.2 4c3.8.5 5.5 4.4 3.8 7.8C19.5 16.4 12 21 12 21z"/></svg>
+        <span class="wish-count" id="wishCount">0</span>
+      </button>
+      <a href="collections.html" class="nav-cta"><span>View Collection</span><svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg></a>
+      <button class="icon-btn menu-btn" id="menuToggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO BANNER -->
+<section class="page-hero-banner">
+  <div class="placeholder-img">
+    <img src="images/collections-hero.jpg" alt="Collections hero" onerror="this.remove()" onload="this.parentElement.classList.add('has-img')">
+    <span class="ph-label">Collections page hero photo</span>
+  </div>
+  <div class="wrap">
+    <p class="breadcrumb"><a href="index.html">Home</a> › Collections</p>
+    <h1>Collections</h1>
+    <p>Five curated edits, each built around how a different room is actually lived in.</p>
+  </div>
+</section>
+
+<!-- COLLECTION BLOCKS (rendered from js/products.js -> COLLECTIONS) -->
+<div id="collectionsWrap"></div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div style="max-width:260px;">
+        <span class="brand-name">Lumora</span>
+        <p style="color:#B9AF9E;font-size:0.88rem;margin-top:10px;">Furniture that makes your space feel like home. Thoughtfully crafted, designed to last for generations.</p>
+        <div class="social-row">
+          <a class="social-btn" href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7.5H16l.4-3H13.5V8.4c0-.87.24-1.46 1.5-1.46H16.5V4.35C16.24 4.32 15.36 4.25 14.33 4.25c-2.15 0-3.63 1.31-3.63 3.72v2.53H8v3h2.7V21h2.8z"/></svg></a>
+          <a class="social-btn" href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 8.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm0 5.6a2.2 2.2 0 1 1 0-4.4 2.2 2.2 0 0 1 0 4.4zM16.9 4H7.1A3.1 3.1 0 0 0 4 7.1v9.8A3.1 3.1 0 0 0 7.1 20h9.8a3.1 3.1 0 0 0 3.1-3.1V7.1A3.1 3.1 0 0 0 16.9 4zm1.9 12.9a1.9 1.9 0 0 1-1.9 1.9H7.1a1.9 1.9 0 0 1-1.9-1.9V7.1a1.9 1.9 0 0 1 1.9-1.9h9.8a1.9 1.9 0 0 1 1.9 1.9zM17 7.6a.9.9 0 1 1-1.8 0 .9.9 0 0 1 1.8 0z"/></svg></a>
+          <a class="social-btn" href="#" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16.6 4c.3 1.9 1.5 3.3 3.4 3.5v2.4c-1.2.1-2.4-.3-3.4-1v6.4c0 3-2.4 4.7-4.9 4.7-2.7 0-4.9-2-4.9-4.6 0-2.9 2.6-5 5.5-4.5v2.5c-1.3-.3-2.9.4-2.9 2 0 1.2 1.1 2 2.3 2 1.4 0 2.4-1 2.4-2.9V4h2.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <a href="index.html">Home</a>
+          <a href="furniture.html">Furniture</a>
+          <a href="collections.html">Collections</a>
+          <a href="about.html">About Us</a>
+          <a href="inspiration.html">Inspiration</a>
+        </div>
+        <div class="footer-col">
+          <h5>Furniture</h5>
+          <a href="collections.html#living-room">Living Room</a>
+          <a href="collections.html#bedroom">Bedroom</a>
+          <a href="collections.html#dining">Dining</a>
+          <a href="collections.html#office">Office</a>
+          <a href="collections.html#outdoor">Outdoor</a>
+        </div>
+        <div class="footer-col">
+          <h5>Visit</h5>
+          <a href="contact.html">Contact Us</a>
+          <a href="contact.html">Visit Our Showroom</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lumora Furnishings. All rights reserved.</span>
+      <span>Made with care in Lagos</span>
+    </div>
+  </div>
+</footer>
+
+<!-- mobile nav -->
+<div class="drawer-overlay" id="mobileNavOverlay"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="icon-btn mobile-nav-close" id="mobileNavClose" aria-label="Close menu"><svg viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
+  <a href="index.html">Home</a>
+  <a href="furniture.html">Furniture</a>
+  <a href="collections.html">Collections</a>
+  <a href="about.html">About Us</a>
+  <a href="inspiration.html">Inspiration</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- search -->
+<div class="search-overlay" id="searchOverlay"></div>
+<div class="search-panel" id="searchPanel">
+  <form id="searchForm">
+    <input type="text" id="searchInput" placeholder="Search furniture…" autocomplete="off">
+    <button type="button" class="close-search" id="searchClose"><svg viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
+  </form>
+</div>
+
+<!-- wishlist drawer -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="wishDrawer">
+  <div class="drawer-head">
+    <h3>Wishlist</h3>
+    <button class="drawer-close" id="drawerClose" aria-label="Close wishlist"><svg viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const arrow = '<svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>';
+
+  function collectionBlockHTML(c, index){
+    const reverse = index % 2 === 1 ? ' reverse' : '';
+    const products = c.productIds.map(function(id){ return PRODUCTS.find(function(p){ return p.id === id; }); }).filter(Boolean);
+    const tags = products.map(function(p){
+      return '<a class="collection-tag" href="product.html?id=' + p.id + '">' + p.name + '</a>';
+    }).join('');
+    const thumbs = products.map(function(p){
+      return (
+        '<a class="collection-thumb" href="product.html?id=' + p.id + '">' +
+          '<div class="placeholder-img">' +
+            '<img src="' + p.image + '" alt="' + p.name + '" onerror="this.remove()" onload="this.parentElement.classList.add(\'has-img\')">' +
+            '<span class="ph-label">' + p.name + '</span>' +
+          '</div>' +
+          '<span class="thumb-name">' + p.name + '</span>' +
+        '</a>'
+      );
+    }).join('');
+    return (
+      '<section class="collection-block' + reverse + '">' +
+        '<div class="wrap">' +
+          '<div class="collection-media">' +
+            '<div class="placeholder-img">' +
+              '<img src="' + c.image + '" alt="' + c.name + '" onerror="this.remove()" onload="this.parentElement.classList.add(\'has-img\')">' +
+              '<span class="ph-label">' + c.name + ' photo</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="collection-text">' +
+            '<p class="collection-number">Collection ' + c.number + '</p>' +
+            '<h2 class="collection-title">' + c.name + '</h2>' +
+            '<p class="collection-tagline">' + c.tagline + '</p>' +
+            '<p class="collection-desc">' + c.description + '</p>' +
+            '<div class="collection-tags">' + tags + '</div>' +
+            '<div class="collection-explore"><a href="furniture.html" class="btn btn-solid" style="background:var(--charcoal);">Explore Collection' + arrow + '</a></div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="wrap"><div class="collection-thumbs">' + thumbs + '</div></div>' +
+      '</section>'
+    );
+  }
+
+  document.getElementById('collectionsWrap').innerHTML = COLLECTIONS.map(collectionBlockHTML).join('');
+</script>
+</body>
+</html>

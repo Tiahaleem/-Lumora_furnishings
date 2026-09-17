@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inspiration — Lumora Furnishings</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <div class="placeholder-img brand-mark">
+        <img src="images/logo.png" alt="Lumora Furnishings logo" onerror="this.remove()" onload="this.parentElement.classList.add('has-img')">
+      </div>
+      <span class="brand-name">Lumora</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="furniture.html">Furniture</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About Us</a>
+      <a href="inspiration.html">Inspiration</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
+      </button>
+      <button class="icon-btn" id="wishlistToggle" aria-label="Open wishlist">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.2C.3 8.4 2 4.5 5.8 4c2.1-.3 4 1 6.2 3.3C14.2 5 16.1 3.7 18.2 4c3.8.5 5.5 4.4 3.8 7.8C19.5 16.4 12 21 12 21z"/></svg>
+        <span class="wish-count" id="wishCount">0</span>
+      </button>
+      <a href="collections.html" class="nav-cta"><span>View Collection</span><svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg></a>
+      <button class="icon-btn menu-btn" id="menuToggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="journal-intro">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="index.html">Home</a> › Inspiration</p>
+    <p class="section-label center">The Lumora Journal</p>
+    <h1>The Lumora Journal</h1>
+    <p class="lead">Ideas, inspiration, and stories for creating spaces you love.</p>
+  </div>
+</section>
+
+<!-- FEATURED ARTICLE -->
+<section class="featured-article-wrap">
+  <div class="wrap">
+    <div class="featured-article">
+      <div class="placeholder-img">
+        <img src="images/journal-featured.jpg" alt="How to choose the perfect sofa" onerror="this.remove()" onload="this.parentElement.classList.add('has-img')">
+        <span class="ph-label">Featured article photo</span>
+      </div>
+      <div class="featured-article-text">
+        <span class="featured-badge">Buying Guides</span>
+        <div class="featured-meta">
+          <span>August 28, 2026</span>
+          <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 14"/></svg>8 min read</span>
+        </div>
+        <h2>How to Choose the Perfect Sofa for Your Living Room</h2>
+        <p class="excerpt">A sofa is the most-used piece of furniture in your home. Here's how to choose one that looks beautiful and feels comfortable for years to come.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE GRID -->
+<section class="article-grid-wrap">
+  <div class="wrap">
+    <div class="article-grid" id="articleGrid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div style="max-width:260px;">
+        <span class="brand-name">Lumora</span>
+        <p style="color:#B9AF9E;font-size:0.88rem;margin-top:10px;">Furniture that makes your space feel like home. Thoughtfully crafted, designed to last for generations.</p>
+        <div class="social-row">
+          <a class="social-btn" href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7.5H16l.4-3H13.5V8.4c0-.87.24-1.46 1.5-1.46H16.5V4.35C16.24 4.32 15.36 4.25 14.33 4.25c-2.15 0-3.63 1.31-3.63 3.72v2.53H8v3h2.7V21h2.8z"/></svg></a>
+          <a class="social-btn" href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 8.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm0 5.6a2.2 2.2 0 1 1 0-4.4 2.2 2.2 0 0 1 0 4.4zM16.9 4H7.1A3.1 3.1 0 0 0 4 7.1v9.8A3.1 3.1 0 0 0 7.1 20h9.8a3.1 3.1 0 0 0 3.1-3.1V7.1A3.1 3.1 0 0 0 16.9 4zm1.9 12.9a1.9 1.9 0 0 1-1.9 1.9H7.1a1.9 1.9 0 0 1-1.9-1.9V7.1a1.9 1.9 0 0 1 1.9-1.9h9.8a1.9 1.9 0 0 1 1.9 1.9zM17 7.6a.9.9 0 1 1-1.8 0 .9.9 0 0 1 1.8 0z"/></svg></a>
+          <a class="social-btn" href="#" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16.6 4c.3 1.9 1.5 3.3 3.4 3.5v2.4c-1.2.1-2.4-.3-3.4-1v6.4c0 3-2.4 4.7-4.9 4.7-2.7 0-4.9-2-4.9-4.6 0-2.9 2.6-5 5.5-4.5v2.5c-1.3-.3-2.9.4-2.9 2 0 1.2 1.1 2 2.3 2 1.4 0 2.4-1 2.4-2.9V4h2.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <a href="index.html">Home</a>
+          <a href="furniture.html">Furniture</a>
+          <a href="collections.html">Collections</a>
+          <a href="about.html">About Us</a>
+          <a href="inspiration.html">Inspiration</a>
+        </div>
+        <div class="footer-col">
+          <h5>Furniture</h5>
+          <a href="collections.html#living-room">Living Room</a>
+          <a href="collections.html#bedroom">Bedroom</a>
+          <a href="collections.html#dining">Dining</a>
+          <a href="collections.html#office">Office</a>
+          <a href="collections.html#outdoor">Outdoor</a>
+        </div>
+        <div class="footer-col">
+          <h5>Visit</h5>
+          <a href="contact.html">Contact Us</a>
+          <a href="contact.html">Visit Our Showroom</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lumora Furnishings. All rights reserved.</span>
+      <span>Made with care in Lagos</span>
+    </div>
+  </div>
+</footer>
+
+<!-- mobile nav -->
+<div class="drawer-overlay" id="mobileNavOverlay"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="icon-btn mobile-nav-close" id="mobileNavClose" aria-label="Close menu"><svg viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
+  <a href="index.html">Home</a>
+  <a href="furniture.html">Furniture</a>
+  <a href="collections.html">Collections</a>
+  <a href="about.html">About Us</a>
+  <a href="inspiration.html">Inspiration</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- search -->
+<div class="search-overlay" id="searchOverlay"></div>
+<div class="search-panel" id="searchPanel">
+  <form id="searchForm">
+    <input type="text" id="searchInput" placeholder="Search furniture…" autocomplete="off">
+    <button type="button" class="close-search" id="searchClose"><svg viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
+  </form>
+</div>
+
+<!-- wishlist drawer -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="wishDrawer">
+  <div class="drawer-head">
+    <h3>Wishlist</h3>
+    <button class="drawer-close" id="drawerClose" aria-label="Close wishlist"><svg viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const clockIcon = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 14"/></svg>';
+
+  const ARTICLES = [
+    { id: "small-space", category: "Design Tips", date: "September 12, 2026", read: "6 min read",
+      title: "5 Ways to Make a Small Space Feel Bigger",
+      excerpt: "You don't need to knock down walls to make a room feel more spacious. These five choices can transform a compact space.",
+      image: "images/journal-small-space.jpg" },
+    { id: "natural-wood", category: "Materials", date: "September 5, 2026", read: "7 min read",
+      title: "The Beauty of Natural Wood Furniture",
+      excerpt: "Wood is one of the few materials that gets more beautiful with age. Here's why natural wood furniture is worth the investment.",
+      image: "images/journal-natural-wood.jpg" },
+    { id: "minimalist-bedroom", category: "Design Tips", date: "August 20, 2026", read: "6 min read",
+      title: "How to Create a Warm Minimalist Bedroom",
+      excerpt: "Minimalism doesn't have to mean cold and stark. Here's how to create a bedroom that's simple and deeply comforting.",
+      image: "images/journal-minimalist-bedroom.jpg" },
+    { id: "dining-table", category: "Buying Guides", date: "August 8, 2026", read: "7 min read",
+      title: "Choosing the Right Dining Table for Your Space",
+      excerpt: "A dining table is where life happens. Here's how to pick one that fits your space, your style, and the way you actually eat.",
+      image: "images/journal-dining-table.jpg" },
+    { id: "design-trends", category: "Trends", date: "September 15, 2026", read: "5 min read",
+      title: "Interior Design Trends We Love Right Now",
+      excerpt: "From warm minimalism to the return of solid wood, here are a few trends worth paying attention to this year.",
+      image: "images/journal-trends.jpg" }
+  ];
+
+  document.getElementById('articleGrid').innerHTML = ARTICLES.map(function(a){
+    return (
+      '<article class="article-card">' +
+        '<div class="placeholder-img">' +
+          '<img src="' + a.image + '" alt="' + a.title + '" onerror="this.remove()" onload="this.parentElement.classList.add(\'has-img\')">' +
+          '<span class="ph-label">' + a.title + ' photo</span>' +
+          '<span class="product-badge">' + a.category + '</span>' +
+        '</div>' +
+        '<div class="article-card-body">' +
+          '<div class="article-meta"><span>' + a.date + '</span><span>' + clockIcon + a.read + '</span></div>' +
+          '<h3>' + a.title + '</h3>' +
+          '<p class="excerpt">' + a.excerpt + '</p>' +
+        '</div>' +
+      '</article>'
+    );
+  }).join('');
+</script>
+</body>
+</html>
