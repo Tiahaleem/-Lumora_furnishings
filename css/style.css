@@ -219,6 +219,7 @@ header.nav-overlay.transparent .brand-mark{border-color:rgba(250,247,240,0.4);ba
 .hero-full .placeholder-img{
   position:absolute;inset:0;width:100%;height:100%;border:none;border-radius:0;
 }
+.hero-full .placeholder-img img{object-fit:cover;}
 .hero-full::after{
   content:"";position:absolute;inset:0;
   background:linear-gradient(180deg, rgba(23,20,15,0.55), rgba(23,20,15,0.72));
@@ -287,6 +288,7 @@ header.nav-overlay.transparent .brand-mark{border-color:rgba(250,247,240,0.4);ba
 /* full-bleed hero banner for inner pages (shorter than the Home hero) */
 .page-hero-banner{position:relative;min-height:52vh;display:flex;align-items:flex-end;overflow:hidden;}
 .page-hero-banner .placeholder-img{position:absolute;inset:0;width:100%;height:100%;border:none;border-radius:0;}
+.page-hero-banner .placeholder-img img{object-fit:cover;}
 .page-hero-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(20,19,16,0.15), rgba(20,19,16,0.78));}
 .page-hero-banner .wrap{position:relative;z-index:2;padding-bottom:56px;}
 .breadcrumb{font-size:0.8rem;color:rgba(250,247,240,0.7);margin-bottom:16px;}
@@ -444,6 +446,11 @@ footer .brand-name{color:#F4F0E6;}
 }
 @media (max-width:560px){
   .wrap{padding:0 20px;}
+  .nav{padding:14px 16px;gap:10px;}
+  .nav-actions{gap:8px;}
+  .icon-btn{width:32px;height:32px;}
+  .brand-name{font-size:1.1rem;}
+  .nav-cta{display:none;}
   .collection-grid{grid-template-columns:1fr 1fr;}
   .room-grid{grid-template-columns:1fr;}
   .product-grid{grid-template-columns:1fr;}
@@ -691,4 +698,33 @@ footer .brand-name{color:#F4F0E6;}
 }
 @media (max-width:560px){
   .form-row{grid-template-columns:1fr;gap:0;}
+}
+
+/* ---------- mobile polish pass: tighter spacing, better density on phones ---------- */
+@media (max-width:640px){
+  .collections, .products, .craft, .why, .testimonials,
+  .our-story, .process, .values, .final-cta,
+  .collection-block, .our-story, .journal-intro,
+  .contact-methods, .contact-main{
+    padding-top:48px;
+    padding-bottom:48px;
+  }
+  .showcase-dark, .philosophy, .stats{
+    padding-top:56px;
+    padding-bottom:56px;
+  }
+  .page-hero-banner{min-height:38vh;}
+  .col-head{margin-bottom:26px;}
+  .product-grid, .featured-grid, .collection-grid, .room-grid{gap:16px;}
+  .why-grid, .testimonial-grid, .values-grid, .process-grid{gap:14px;}
+  .product-info{gap:4px;}
+  .product-card h3{font-size:1.02rem;}
+  .our-story .wrap, .product-about .wrap, .product-dims .wrap{gap:28px;}
+  .craft .wrap, .visit .wrap, .contact-layout{gap:28px;}
+}
+@media (max-width:400px){
+  .wrap{padding:0 16px;}
+  .hero-full h1{font-size:2.1rem;}
+  .page-hero-banner h1{font-size:1.8rem;}
+  .collection-grid, .strip-grid{grid-template-columns:1fr 1fr;}
 }

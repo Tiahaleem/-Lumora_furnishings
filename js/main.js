@@ -31,7 +31,7 @@ function productCardHTML(p){
       '<div class="product-media">' +
         '<a class="product-image-link" href="product.html?id=' + p.id + '">' +
           '<div class="placeholder-img">' +
-            '<img src="' + p.image + '" alt="' + p.name + '" onerror="this.remove()" onload="this.parentElement.classList.add(\'has-img\')">' +
+            '<img loading="lazy" src="' + p.image + '" alt="' + p.name + '" onerror="this.remove()" onload="this.parentElement.classList.add(\'has-img\')">' +
             '<span class="ph-label">' + p.name + ' image</span>' +
           '</div>' +
           '<span class="product-badge">' + p.room + '</span>' +
@@ -68,7 +68,7 @@ function renderWishDrawer(){
     return (
       '<div class="drawer-item">' +
         '<div class="placeholder-img">' +
-          '<img src="' + p.image + '" alt="' + p.name + '" onerror="this.remove()" onload="this.parentElement.classList.add(\'has-img\')">' +
+          '<img loading="lazy" src="' + p.image + '" alt="' + p.name + '" onerror="this.remove()" onload="this.parentElement.classList.add(\'has-img\')">' +
         '</div>' +
         '<div class="drawer-item-info">' +
           '<h4>' + p.name + '</h4>' +
