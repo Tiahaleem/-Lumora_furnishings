@@ -1,4 +1,4 @@
-# Lumora Furnishings — site
+# Simply'Moh Furniture Concept — site
 
 ## Structure
 - index.html — Home
@@ -58,5 +58,9 @@ in js/products.js and is starter text — replace with your real specs before la
 
 ## Status
 Every page is now built: Home, Furniture, Collections, About Us, Inspiration, and Contact.
-What's left is mostly content — your real photos, WhatsApp number, business details, and
-(optionally) real blog posts and a form backend.
+Real business details are now wired in: WhatsApp/phone (0812 523 6606), email
+(bolajiidris858@gmail.com), Instagram and TikTok, and "Lagos, Ajah — also delivers
+interstate" wherever location comes up. Brand name is "Simply'Moh Furniture Concept"
+throughout. What's left is mostly photos — your logo and product/room images — plus,
+optionally, real blog posts and a form backend if you want the contact form to send
+actual emails instead of opening WhatsApp.
