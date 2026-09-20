@@ -134,47 +134,38 @@
 <script>
   const arrow = '<svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>';
 
-  function collectionBlockHTML(c, index){
-    const reverse = index % 2 === 1 ? ' reverse' : '';
-    const products = c.productIds.map(function(id){ return PRODUCTS.find(function(p){ return p.id === id; }); }).filter(Boolean);
-    const tags = products.map(function(p){
-      return '<a class="collection-tag" href="product.html?id=' + p.id + '">' + p.name + '</a>';
-    }).join('');
-    const thumbs = products.map(function(p){
-      return (
-        '<a class="collection-thumb" href="product.html?id=' + p.id + '">' +
-          '<div class="placeholder-img">' +
-            '<img src="' + p.image + '" alt="' + p.name + '" onerror="this.remove()" onload="this.parentElement.classList.add(\'has-img\')">' +
-            '<span class="ph-label">' + p.name + '</span>' +
-          '</div>' +
-          '<span class="thumb-name">' + p.name + '</span>' +
-        '</a>'
-      );
-    }).join('');
+  // build each collection block, then fill its product grid with the
+  // exact same reliable card component used on Home and Furniture
+  document.getElementById('collectionsWrap').innerHTML = COLLECTIONS.map(function(c){
     return (
-      '<section class="collection-block' + reverse + '">' +
+      '<section class="collection-block">' +
         '<div class="wrap">' +
-          '<div class="collection-media">' +
+          '<div class="collection-banner">' +
             '<div class="placeholder-img">' +
               '<img src="' + c.image + '" alt="' + c.name + '" onerror="this.remove()" onload="this.parentElement.classList.add(\'has-img\')">' +
               '<span class="ph-label">' + c.name + ' photo</span>' +
             '</div>' +
           '</div>' +
-          '<div class="collection-text">' +
+          '<div class="collection-intro">' +
             '<p class="collection-number">Collection ' + c.number + '</p>' +
             '<h2 class="collection-title">' + c.name + '</h2>' +
             '<p class="collection-tagline">' + c.tagline + '</p>' +
             '<p class="collection-desc">' + c.description + '</p>' +
-            '<div class="collection-tags">' + tags + '</div>' +
             '<div class="collection-explore"><a href="furniture.html" class="btn btn-solid" style="background:var(--charcoal);">Explore Collection' + arrow + '</a></div>' +
           '</div>' +
+          '<div class="collection-products">' +
+            '<div class="product-grid featured-grid" id="grid-' + c.id + '"></div>' +
+          '</div>' +
         '</div>' +
-        '<div class="wrap"><div class="collection-thumbs">' + thumbs + '</div></div>' +
       '</section>'
     );
-  }
+  }).join('');
 
-  document.getElementById('collectionsWrap').innerHTML = COLLECTIONS.map(collectionBlockHTML).join('');
+  // now fill each collection's product grid
+  COLLECTIONS.forEach(function(c){
+    const products = c.productIds.map(function(id){ return PRODUCTS.find(function(p){ return p.id === id; }); }).filter(Boolean);
+    renderProductGrid(document.getElementById('grid-' + c.id), products);
+  });
 </script>
 </body>
 </html>
