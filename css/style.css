@@ -31,7 +31,11 @@ body{
   overflow-x:hidden;
   padding-top:82px;
 }
-body.hero-page{padding-top:0;}
+body.hero-page{padding-top:82px;}
+.hero-full, .page-hero-banner{margin-top:-82px;}
+@media (max-width:560px){
+  .hero-full, .page-hero-banner{margin-top:-70px;}
+}
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;display:block;}
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
@@ -473,26 +477,23 @@ footer .brand-name{color:#F4F0E6;}
   html{scroll-behavior:auto;}
 }
 
-/* ---------- collections page ---------- */
-.collection-block{padding:80px 0;}
+/* ---------- collections page (redesigned: simple, reuses the proven product-card component) ---------- */
+.collection-block{padding:64px 0;text-align:center;}
 .collection-block + .collection-block{border-top:1px solid var(--border);}
-.collection-block .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-.collection-block.reverse .collection-media{order:2;}
-.collection-block.reverse .collection-text{order:1;}
-.collection-media{aspect-ratio:4/3.3;position:relative;}
+.collection-banner{aspect-ratio:21/9;max-width:960px;margin:0 auto;border-radius:16px;overflow:hidden;position:relative;}
+.collection-intro{max-width:640px;margin:32px auto 0;}
 .collection-number{font-size:0.78rem;font-weight:700;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.08em;}
 .collection-title{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-style:italic;margin-top:8px;}
 .collection-tagline{font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gold-deep);margin-top:10px;}
-.collection-desc{color:var(--text-soft);margin-top:16px;max-width:52ch;line-height:1.75;}
-.collection-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
-.collection-tag{font-size:0.78rem;padding:7px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--border);color:var(--text-soft);transition:.2s;}
-.collection-tag:hover{border-color:var(--gold-deep);color:var(--gold-deep);}
+.collection-desc{color:var(--text-soft);margin-top:16px;line-height:1.75;}
 .collection-explore{margin-top:26px;}
-.collection-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px;}
-.collection-thumb{display:block;}
-.collection-thumb .placeholder-img{aspect-ratio:1/1;}
-.collection-thumb .thumb-name{display:block;margin-top:10px;font-size:0.9rem;color:var(--text);}
-.collection-thumb:hover .thumb-name{color:var(--gold-deep);}
+.collection-products{margin-top:44px;}
+.collection-products .product-grid{text-align:left;}
+
+@media (max-width:640px){
+  .collection-banner{aspect-ratio:4/3;border-radius:12px;}
+  .collection-block{padding:44px 0;}
+}
 
 /* ---------- product detail page ---------- */
 .product-page{padding:44px 0 0;}
@@ -542,10 +543,6 @@ footer .brand-name{color:#F4F0E6;}
 .back-link:hover{color:var(--gold-deep);}
 
 @media (max-width:960px){
-  .collection-block .wrap{grid-template-columns:1fr;}
-  .collection-block.reverse .collection-media{order:0;}
-  .collection-block.reverse .collection-text{order:0;}
-  .collection-thumbs{grid-template-columns:repeat(2,1fr);}
   .product-layout{grid-template-columns:1fr;}
   .product-about .wrap{grid-template-columns:1fr;}
   .product-dims .wrap{grid-template-columns:1fr;}
